@@ -1,0 +1,26 @@
+<form [formGroup]="form" (ngSubmit)="handleSubmit()">
+  <span class="p-float-label">
+    <input pInputText id="title" formControlName="title" />
+    <label htmlFor="title">Title</label>
+  </span>
+  <span class="p-float-label">
+    <input pInputText id="description" formControlName="description" />
+    <label htmlFor="description">Description</label>
+  </span>
+  <span class="p-float-label">
+    <p-inputNumber width="100%" id="pageCount" formControlName="pageCount"></p-inputNumber>
+    <label htmlFor="pageCount">Page Count</label>
+  </span>
+  <span class="p-float-label">
+    <p-calendar id="publishDate" formControlName="publishDate"></p-calendar>
+    <label htmlFor="publishDate">Publish Date</label>
+  </span>
+  <span class="p-float-label">
+    <input pInputText id="excerpt" formControlName="excerpt" />
+    <label htmlFor="excerpt">Excerpt</label>
+  </span>
+  <div class="buttons">
+    <p-button type="submit" [disabled]="form.invalid" label="Confirm"></p-button>
+    <p-button type="button" [disabled]="form.invalid" (onClick)="handleReset()" label="Discard changes"></p-button>
+  </div>
+</form>

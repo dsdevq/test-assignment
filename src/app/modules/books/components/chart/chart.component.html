@@ -1,0 +1,3 @@
+<ng-container *ngIf="chartData$ | async as chartData">
+  <p-chart #chart type="bar" height="500px" [data]="chartData" [options]="chartOptions"></p-chart>
+</ng-container>

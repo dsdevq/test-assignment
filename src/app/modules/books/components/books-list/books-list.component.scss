@@ -1,0 +1,29 @@
+:host::ng-deep.table {
+  &__caption {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__header {
+    width: 100%;
+    .calendar__buttons {
+      display: flex;
+      gap: 10px;
+    }
+  }
+  &__body {
+    td {
+      max-width: 100px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+::ng-deep {
+  display: block;
+  .calendar__buttons {
+    display: flex;
+    gap: 10px;
+  }
+}

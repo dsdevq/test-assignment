@@ -1,0 +1,29 @@
+:host::ng-deep {
+  form {
+    padding-top: 20px;
+    display: grid;
+    gap: 20px;
+    span {
+      > * {
+        display: grid;
+        width: 100%;
+      }
+    }
+    .buttons {
+      display: flex;
+      gap: 20px;
+    }
+  }
+  .dialog-content {
+    > .p-dialog-content {
+      overflow: unset !important;
+    }
+  }
+}
+::ng-deep {
+  .dialog-content {
+    > .p-dialog-content {
+      overflow: visible;
+    }
+  }
+}
